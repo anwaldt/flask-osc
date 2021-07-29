@@ -7,7 +7,7 @@ User=pi
 Group=pi
 WorkingDirectory=/home/pi/flask/hvc2
 Environment="PATH=/home/pi/flask/hvc2/flasktest/bin"
-ExecStart=/home/pi/flask/hvc2/flasktest/bin/uwsgi --ini flasktest.ini
+ExecStart=/home/pi/flask/hvc2/flasktest/bin/uwsgi --ini flasktest.ini --uid www-data --gid www-data
 PrivateTmp=true
 
 [Install]
