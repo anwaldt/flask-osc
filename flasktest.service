@@ -1,0 +1,14 @@
+[Unit]
+Description=uWSGI instance for testing flask
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/flask/hvc2
+Environment="PATH=/home/pi/flask/hvc2/flasktest/bin"
+ExecStart=/home/pi/flask/hvc2/flasktest/bin/uwsgi --ini flasktest.ini
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,38 @@
+#N canvas 1110 243 603 637 12;
+#X msg 102 41 listen 1337;
+#X obj 102 85 netreceive -u -b;
+#X obj 102 110 oscparse;
+#X obj 102 135 list trim;
+#X obj 102 160 route kick;
+#X obj 102 185 route trigger;
+#X obj 260 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 107 547 dac~;
+#X obj 78 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 106 485 *~;
+#X msg 61 267 1, f 1;
+#X msg 139 286 0;
+#X obj 139 261 delay 300;
+#X obj 106 460 osc~ 100;
+#X obj 7 363 adsr 300 0 100 0 100;
+#X obj 245 361 adsr 1 0 500 100 300;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 8 0;
+#X connect 8 0 10 0;
+#X connect 8 0 12 0;
+#X connect 9 0 7 0;
+#X connect 9 0 7 1;
+#X connect 10 0 14 0;
+#X connect 10 0 15 0;
+#X connect 11 0 14 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 0;
+#X connect 13 0 9 0;
+#X connect 14 0 13 0;
+#X connect 15 0 9 1;
